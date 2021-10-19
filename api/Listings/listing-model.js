@@ -13,8 +13,8 @@ function addListing(listing) {
   return db.select("*").from("listing").insert(listing);
 }
 
-function getListingById(id) {
-  return db.select("*").from("listing").where({ id });
+function getListingById(listing_id) {
+  return db.select("*").from("listing").where({ listing_id });
 }
 
 function getListings() {
@@ -25,10 +25,10 @@ function findBy(listing) {
   return db.select("*").from("listing").where(listing);
 }
 
-function updateListing(id, changes) {
-  return db.select("*").from("listing").where({ id }).update(changes);
+function updateListing(listing_id, changes) {
+  return db.select("*").from("listing").where({ listing_id }).update(changes);
 }
 
-function removeListing(id) {
-  return db.select("*").from("listing").where({ id }).del();
+function removeListing(listing_id) {
+  return db.select("*").from("listing").where({ listing_id }).del();
 }

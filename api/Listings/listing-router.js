@@ -32,9 +32,9 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
   const changes = req.body;
-  const { id } = req.params;
+  const { listing_id } = req.params;
 
-  Listing.updateListing(id, changes)
+  Listing.updateListing(listing_id, changes)
     .then((listing) => {
       if (listing) {
         res.status(200).json({ listing });
@@ -51,10 +51,10 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:listing_id", (req, res) => {
   const { id } = req.params;
 
-  Listing.removeListing(id)
+  Listing.removeListing(listing_id)
     .then((listing) => {
       if (listing) {
         res.status(200).json({ data: listing, message: "listing deleted" });
@@ -67,9 +67,9 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-router.get("/:id", (req, res) => {
-  const { id } = req.params;
-  Listing.getListingById(id)
+router.get("/:listing_id", (req, res) => {
+  const { listing_id } = req.params;
+  Listing.getListingById(listing_id)
     .then((listing) => {
       res.status(200).json({ listing });
     })
