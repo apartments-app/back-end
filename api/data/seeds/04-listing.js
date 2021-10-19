@@ -1,5 +1,5 @@
 exports.seed = function (knex) {
-  return knex("users").insert([
+  return knex("listing").insert([
     {
       user_id: 1,
       location: "New York, NY",
