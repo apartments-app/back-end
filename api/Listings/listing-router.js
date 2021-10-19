@@ -1,7 +1,10 @@
 const express = require("express");
 const Listing = require("./listing-model");
+const restricted = require("../middleware/restricted");
 
 const router = express.Router();
+
+router.use(restricted);
 
 router.get("/", (req, res) => {
   Listing.getListings()
