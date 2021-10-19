@@ -1,5 +1,6 @@
 exports.up = async (knex) => {
   await knex.schema.createTable("listing", (listing) => {
+    listing.increments("listing_id");
     listing.integer("user_id").unsigned().notNullable();
     listing.string("location", 30).notNullable();
     listing.string("price", 50).notNullable();
