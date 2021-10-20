@@ -8,14 +8,14 @@ exports.seed = function (knex) {
       img: "https://picsum.photos/200/300",
       first_name: "ben",
       last_name: "dover",
-      role_id: 0,
+      role: 0,
     },
     {
       password: hashed("123"),
       email: "dylan@gmail.com",
       first_name: "dylan",
       last_name: "rymizea",
-      role_id: 0,
+      role: 0,
     },
     {
       password: hashed("123"),
@@ -23,7 +23,7 @@ exports.seed = function (knex) {
       img: "https://picsum.photos/200/300",
       first_name: "ben",
       last_name: "dover",
-      role_id: 0,
+      role: 0,
     },
     {
       password: hashed("123"),
@@ -31,7 +31,7 @@ exports.seed = function (knex) {
       img: "https://picsum.photos/200/300",
       first_name: "daniel",
       last_name: "kim",
-      role_id: 0,
+      role: 0,
     },
     {
       password: hashed("123"),
@@ -39,7 +39,7 @@ exports.seed = function (knex) {
       img: "https://picsum.photos/200/300",
       first_name: "kyle",
       last_name: "lee",
-      role_id: 0,
+      role: 0,
     },
     {
       password: hashed("123"),
@@ -47,7 +47,7 @@ exports.seed = function (knex) {
       img: "https://picsum.photos/200/300",
       first_name: "issac",
       last_name: "rob",
-      role_id: 0,
+      role: 0,
     },
     {
       password: hashed("123"),
@@ -55,7 +55,7 @@ exports.seed = function (knex) {
       img: "https://picsum.photos/200/300",
       first_name: "francis",
       last_name: "nguyen",
-      role_id: 1,
+      role: 1,
     },
     {
       password: hashed("123"),
@@ -63,7 +63,7 @@ exports.seed = function (knex) {
       img: "https://picsum.photos/200/300",
       first_name: "krisda",
       last_name: "dover",
-      role_id: 1,
+      role: 1,
     },
   ]);
 };

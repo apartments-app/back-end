@@ -3,9 +3,9 @@ exports.up = async (knex) => {
     users.increments("user_id");
     users.string("email", 200).notNullable();
     users.string("password", 200).notNullable();
-    users.integer("role_id", 2).notNullable();
-    users.string("first_name", 200).notNullable();
-    users.string("last_name", 200).notNullable();
+    users.integer("role", 2).notNullable();
+    users.string("first_name", 200)
+    users.string("last_name", 200)
     users.string("birthday", 200)
     users.string("phone", 50)
     users.string("bio", 1000)
