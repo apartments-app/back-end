@@ -17,8 +17,14 @@ function getListingById(listing_id) {
   return db.select("*").from("listing").where({ listing_id });
 }
 
-function getListings() {
-  return db.select("*").from("listing");
+async function getListings() {
+  const listing = await db("listing");
+  const image = await db("image");
+  const images = listing.map((each) => {
+    each.image_url = image.filter((id) => id.listing_id === each.listing_id);
+    return each;
+  });
+  return images;
 }
 
 function findBy(listing) {
