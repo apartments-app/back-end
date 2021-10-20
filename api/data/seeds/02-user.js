@@ -3,7 +3,6 @@ exports.seed = function (knex) {
   const hashed = (data) => bcrypt.hashSync(data, 8);
   return knex("users").insert([
     {
-      username: "roman",
       password: hashed("123"),
       email: "roman@gmail.com",
       img: "https://picsum.photos/200/300",
@@ -12,7 +11,6 @@ exports.seed = function (knex) {
       role_id: 0,
     },
     {
-      username: "dylan",
       password: hashed("123"),
       email: "dylan@gmail.com",
       first_name: "dylan",
@@ -20,7 +18,6 @@ exports.seed = function (knex) {
       role_id: 0,
     },
     {
-      username: "daniel",
       password: hashed("123"),
       email: "daniel@gmail.com",
       img: "https://picsum.photos/200/300",
@@ -29,7 +26,6 @@ exports.seed = function (knex) {
       role_id: 0,
     },
     {
-      username: "kyle",
       password: hashed("123"),
       email: "kyle@gmail.com",
       img: "https://picsum.photos/200/300",
@@ -38,7 +34,6 @@ exports.seed = function (knex) {
       role_id: 0,
     },
     {
-      username: "ben",
       password: hashed("123"),
       email: "ben@gmail.com",
       img: "https://picsum.photos/200/300",
@@ -47,7 +42,6 @@ exports.seed = function (knex) {
       role_id: 0,
     },
     {
-      username: "issac",
       password: hashed("123"),
       email: "issac@gmail.com",
       img: "https://picsum.photos/200/300",
@@ -56,7 +50,6 @@ exports.seed = function (knex) {
       role_id: 0,
     },
     {
-      username: "francis",
       password: hashed("123"),
       email: "francis@gmail.com",
       img: "https://picsum.photos/200/300",
@@ -65,7 +58,6 @@ exports.seed = function (knex) {
       role_id: 1,
     },
     {
-      username: "krisda",
       password: hashed("123"),
       email: "krisda@gmail.com",
       img: "https://picsum.photos/200/300",
