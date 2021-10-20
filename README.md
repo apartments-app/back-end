@@ -6,6 +6,31 @@ The following tutorial explains how to set up this project using PostgreSQL and 
 
 [![Setting up PostgreSQL for Build Week](https://img.youtube.com/vi/kTO_tf4L23I/maxresdefault.jpg)](https://www.youtube.com/watch?v=kTO_tf4L23I)
 
+## Endpoints
+
+base url: https://apartmates-be.herokuapp.com/
+
+|  Type  |         Endpoint         |         Function         |
+| :----: | :----------------------: | :----------------------: |
+|  Post  |    /api/auth/register    | Creates Account for User |
+| :---:  |          :---:           |          :---:           |
+|  Post  |     /api/auth/login      |      Login for User      |
+| :---:  |          :---:           |          :---:           |
+|  Get   |     /api/auth/getall     |    Read All User Info    |
+| :---:  |          :---:           |          :---:           |
+|  Put   |     /api/auth/update     |     Update User Info     |
+| :---:  |          :---:           |          :---:           |
+|  Get   |      /api/listing/       |    Read All Listings     |
+| :---:  |          :---:           |          :---:           |
+|  Post  |      /api/listing/       |     Post New Listing     |
+| :---:  |          :---:           |          :---:           |
+|  Put   | /api/listing/:listing_id |    Edit Listing Info     |
+| :---:  |          :---:           |          :---:           |
+| Delete | /api/listing/:listing_id |   Delete New Listings    |
+| :---:  |          :---:           |          :---:           |
+|  Get   | /api/listing/:listing_id |    Get Listing By Id     |
+| :---:  |          :---:           |          :---:           |
+
 ## Requirements
 
 - [PostgreSQL, pgAdmin 4](https://www.postgresql.org/download/) and [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed in your local machine.

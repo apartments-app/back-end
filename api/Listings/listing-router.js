@@ -30,7 +30,7 @@ router.post("/", (req, res) => {
     });
 });
 
-router.put("/:id", (req, res) => {
+router.put("/:listing_id", (req, res) => {
   const changes = req.body;
   const { listing_id } = req.params;
 
