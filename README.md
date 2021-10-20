@@ -8,7 +8,7 @@ The following tutorial explains how to set up this project using PostgreSQL and 
 
 ## Endpoints
 
-base url: https://apartmates-be.herokuapp.com/
+base url: https://apartmates-be.herokuapp.com
 
 |  Type  |         Endpoint         |         Function         |
 | :----: | :----------------------: | :----------------------: |
