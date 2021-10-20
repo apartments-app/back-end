@@ -13,23 +13,14 @@ base url: https://apartmates-be.herokuapp.com/
 |  Type  |         Endpoint         |         Function         |
 | :----: | :----------------------: | :----------------------: |
 |  Post  |    /api/auth/register    | Creates Account for User |
-| :---:  |          :---:           |          :---:           |
 |  Post  |     /api/auth/login      |      Login for User      |
-| :---:  |          :---:           |          :---:           |
 |  Get   |     /api/auth/getall     |    Read All User Info    |
-| :---:  |          :---:           |          :---:           |
 |  Put   |     /api/auth/update     |     Update User Info     |
-| :---:  |          :---:           |          :---:           |
 |  Get   |      /api/listing/       |    Read All Listings     |
-| :---:  |          :---:           |          :---:           |
 |  Post  |      /api/listing/       |     Post New Listing     |
-| :---:  |          :---:           |          :---:           |
 |  Put   | /api/listing/:listing_id |    Edit Listing Info     |
-| :---:  |          :---:           |          :---:           |
 | Delete | /api/listing/:listing_id |   Delete New Listings    |
-| :---:  |          :---:           |          :---:           |
 |  Get   | /api/listing/:listing_id |    Get Listing By Id     |
-| :---:  |          :---:           |          :---:           |
 
 ## Requirements
 
