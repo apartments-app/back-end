@@ -4,8 +4,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "migrate": "knex migrate:latest",
-    "rollback": "knex migrate:rollback",
+    "up": "knex migrate:latest",
+    "down": "knex migrate:rollback",
     "seed": "knex seed:run",
     "migrateh": "heroku run knex migrate:latest -a YOUR_HEROKU_APP_NAME",
     "rollbackh": "heroku run knex migrate:rollback -a YOUR_HEROKU_APP_NAME",
@@ -21,6 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1010.0",
+    "axios": "^0.23.0",
     "bcryptjs": "^2.4.3",
     "connect-session-knex": "^2.1.0",
     "cors": "^2.8.5",

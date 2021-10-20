@@ -2,9 +2,9 @@ const yup = require('yup');
 const Auth = require('../Auth/auth-model');
 
 const registerCheck = yup.object({
-    username: yup.string().required(),
     password: yup.string().min(3).required(),
-    email: yup.string().email().required()
+    email: yup.string().email().required(),
+    role: yup.number().required()
 })
 
 const checkCreateAccount = async (req, res, next) => {
@@ -16,11 +16,11 @@ const checkCreateAccount = async (req, res, next) => {
         res.status(400).json({message: err.message })
     }
 }
-const checkUsernameUnique = async (req, res, next) => {
-    Auth.getByUsername(req.body.username.toLowerCase())
+const checkEmailUnique = async (req, res, next) => {
+    Auth.getByEmail(req.body.email.toLowerCase())
       .then(data => {
         if (data) {
-          res.status(400).json({message:`username ${req.body.username.toLowerCase()} is taken`})
+          res.status(400).json({message:`email ${req.body.email.toLowerCase()} is taken`})
         } else {
           next()
         }
@@ -28,4 +28,4 @@ const checkUsernameUnique = async (req, res, next) => {
       .catch(next)
   }
 
-module.exports = {checkCreateAccount,checkUsernameUnique}
+module.exports = {checkCreateAccount,checkEmailUnique}
