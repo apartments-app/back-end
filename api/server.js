@@ -22,4 +22,8 @@ server.use((err, req, res, next) => {
   });
 });
 
+server.get("/", (req, res) => {
+  res.send({ server: "Server is up" });
+});
+
 module.exports = server;
