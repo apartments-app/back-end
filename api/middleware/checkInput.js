@@ -4,7 +4,12 @@ const Auth = require('../Auth/auth-model');
 const registerCheck = yup.object({
     password: yup.string().min(3).required(),
     email: yup.string().email().required(),
-    role: yup.number().required()
+    role: yup.number().required(),
+    first_name: yup.string().min(3).required(),
+    last_name: yup.string().min(3).required(),
+    bio: yup.string().min(3).required(),
+    phone: yup.string().min(3).required(),
+    birthday: yup.string().min(3).required(),
 })
 
 const checkCreateAccount = async (req, res, next) => {

@@ -36,8 +36,6 @@ exports.seed = function (knex) {
       bio: "Looking for a friend to live with.",
     },
     {
-
-    {
       password: hashed("123"),
       email: "kyle@gmail.com",
       password: hashed("123"),
