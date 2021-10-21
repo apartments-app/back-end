@@ -11,6 +11,10 @@ server.use(express.json());
 server.use(helmet());
 server.use(cors());
 
+server.get("/", (req, res) => {
+  res.send({ server: "Server is up" });
+});
+
 server.use("/api/auth", Auth);
 server.use("/api/listing", Listing);
 server.use("/api/uploadimage", UploadImage);
@@ -20,10 +24,6 @@ server.use((err, req, res, next) => {
     message: err.message,
     stack: err.stack,
   });
-});
-
-server.get("/", (req, res) => {
-  res.send({ server: "Server is up" });
 });
 
 module.exports = server;
